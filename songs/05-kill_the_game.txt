@@ -1,7 +1,0 @@
----
-title: Kill the Game
-style: rock
-background: bg_kill_the_game.png
----
-
-

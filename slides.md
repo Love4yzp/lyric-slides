@@ -39,10 +39,6 @@ src: ./pages/brave_moment.md
 ---
 
 ---
-src: ./pages/kill_the_game.md
----
-
----
 src: ./pages/good_wind.md
 ---
 
