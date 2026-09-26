@@ -1,0 +1,21 @@
+# 乐队 / 演出配置
+# 改这一个文件，就能换成你自己乐队的演出信息。
+# 本示例为 AfterWork 乐队 2026 年会演出（成员姓名已匿名化处理）。
+
+event_title: AfterWork
+event_subtitle: 2026 Annual Party
+
+# 头页大标题下的副标题（可选）
+# tagline: 下班后，我们上台
+
+# 演职员表（结尾页，两列排版，顺序即显示顺序）
+members:
+  - { name: 王耀晖, role: 主唱 }
+  - { name: 颜秋宇, role: 主唱 }
+  - { name: 韦晓妮, role: 主唱/木吉他 }
+  - { name: 荣治兵, role: 电吉他 }
+  - { name: 朱鹏, role: 木吉他/贝斯/键盘 }
+  - { name: 徐志鹏, role: Rapper/木吉他 }
+  - { name: 樊星坤, role: 主唱/贝斯 }
+  - { name: 黄位葳, role: 鼓手 }
+  - { name: 赵鹏, role: 鼓手 }

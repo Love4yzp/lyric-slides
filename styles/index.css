@@ -1,0 +1,576 @@
+/*
+ * After Work Band - 2026 Annual Party
+ * Dark Theme with Elegant Typography
+ */
+
+/* Import Fonts - Chinese & English */
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+KuaiLe&family=ZCOOL+QingKe+HuangYou&family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&family=Long+Cang&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ========================================
+   Dark Theme Variables
+   ======================================== */
+:root {
+  --dark-bg: #0a0a0f;
+  --dark-surface: #12121a;
+  --dark-overlay: rgba(0, 0, 0, 0.75);
+
+  /* Text Colors - Warm & Soft */
+  --text-primary: #f5f0e8;
+  --text-secondary: rgba(245, 240, 232, 0.75);
+  --text-muted: rgba(245, 240, 232, 0.5);
+
+  /* Accent Colors - Subtle Glow */
+  --accent-warm: #e8c49a;
+  --accent-cool: #8fa4b8;
+  --accent-gold: #d4a853;
+
+  /* Shadows */
+  --text-shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.8);
+  --text-shadow-glow: 0 0 30px rgba(232, 196, 154, 0.15);
+}
+
+/* ========================================
+   Global Dark Background
+   ======================================== */
+.slidev-layout {
+  background-color: var(--dark-bg) !important;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.slidev-layout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(10, 10, 15, 0.4) 0%,
+      rgba(10, 10, 15, 0.6) 50%,
+      rgba(10, 10, 15, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* ========================================
+   Chinese Lyrics Typography
+   ======================================== */
+
+/* ========================================
+   Song Style Fonts - 按歌曲风格分类
+   ======================================== */
+
+/* 摇滚/说唱 - 硬朗有力 (都选C, Kill the Game, 不再犹豫) */
+.lyrics-rock {
+  font-family: 'ZCOOL QingKe HuangYou', 'Zhi Mang Xing', 'PingFang SC', sans-serif;
+  color: var(--text-primary);
+  text-shadow:
+    var(--text-shadow-soft),
+    0 0 20px rgba(255, 100, 100, 0.15);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+/* 抒情/浪漫 - 柔和优雅 (一路向北, 你要如何, 鲜花, 勇敢的瞬间) */
+.lyrics-romantic {
+  font-family: 'Ma Shan Zheng', 'Long Cang', 'STKaiti', cursive;
+  color: var(--text-primary);
+  text-shadow:
+    var(--text-shadow-soft),
+    var(--text-shadow-glow);
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+/* 空灵/哲理 - 简约现代 (开到荼靡) */
+.lyrics-ethereal {
+  font-family: 'Liu Jian Mao Cao', 'Ma Shan Zheng', 'STKaiti', cursive;
+  color: var(--text-primary);
+  text-shadow:
+    var(--text-shadow-soft),
+    0 0 30px rgba(180, 180, 255, 0.1);
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+}
+
+/* 励志/正能量 - 现代有力 (好风起) */
+.lyrics-inspiring {
+  font-family: 'ZCOOL KuaiLe', 'Noto Serif SC', sans-serif;
+  color: var(--text-primary);
+  text-shadow:
+    var(--text-shadow-soft),
+    0 0 25px rgba(255, 200, 100, 0.15);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+/* 默认歌词样式 */
+.lyrics-cn {
+  font-family: 'ZCOOL KuaiLe', 'Ma Shan Zheng', 'STKaiti', cursive;
+  color: var(--text-primary);
+  text-shadow:
+    var(--text-shadow-soft),
+    var(--text-shadow-glow);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  max-width: 90vw;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Chinese lyrics - Alternative modern style */
+.lyrics-cn-modern {
+  font-family: 'ZCOOL KuaiLe', 'Noto Serif SC', sans-serif;
+  color: var(--text-primary);
+  text-shadow: var(--text-shadow-soft);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+}
+
+/* Chinese title style */
+.title-cn {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  color: var(--text-primary);
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(212, 168, 83, 0.2);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+/* ========================================
+   English Lyrics Typography
+   ======================================== */
+
+/* English lyrics - Elegant serif */
+.lyrics-en {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: var(--text-primary);
+  text-shadow: var(--text-shadow-soft);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  font-style: italic;
+}
+
+/* English lyrics - Clean modern */
+.lyrics-en-modern {
+  font-family: 'Crimson Text', 'Times New Roman', serif;
+  color: var(--text-primary);
+  text-shadow: var(--text-shadow-soft);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+/* English title style */
+.title-en {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-primary);
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(143, 164, 184, 0.2);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   Mixed Chinese-English Typography
+   ======================================== */
+
+/* For slides with both Chinese and English */
+.lyrics-mixed {
+  font-family: 'Noto Serif SC', 'Playfair Display', serif;
+  color: var(--text-primary);
+  text-shadow: var(--text-shadow-soft);
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   Legacy Classes (Backward Compatible)
+   ======================================== */
+.lyrics-text {
+  font-family: 'ZCOOL KuaiLe', 'Ma Shan Zheng', 'STKaiti', cursive;
+  color: var(--text-primary);
+  text-shadow:
+    3px 3px 8px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.7),
+    0 0 40px rgba(232, 196, 154, 0.1);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+}
+
+.lyrics-title {
+  font-family: 'Noto Serif SC', serif;
+  color: var(--text-primary);
+  text-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(212, 168, 83, 0.15);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.system-font {
+  font-family: 'Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--text-primary);
+  text-shadow:
+    2px 2px 6px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ========================================
+   Slide Layouts & Components
+   ======================================== */
+
+/* Cover slide styling */
+.slide-cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 歌曲开始页 */
+.slide-cover.song-start {
+  background: transparent;
+}
+
+/* 开始页的 divider 变成音符 */
+.slide-cover.song-start .divider {
+  width: auto;
+  height: auto;
+  background: none;
+}
+
+.slide-cover.song-start .divider::before {
+  content: '♪ · ♪ · ♪';
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  opacity: 0.8;
+  letter-spacing: 0.3em;
+}
+
+/* 歌曲结束页 - 装饰线收尾 */
+.slide-cover.song-end::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--accent-gold),
+      transparent);
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+/* Base lyrics container */
+.lyrics-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem 5rem;
+  position: relative;
+  z-index: 1;
+  /* Default: center */
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.lyrics-container p {
+  max-width: 85%;
+  line-height: 1.5;
+}
+
+/* ========================================
+   Lyrics Layout - 简洁居中 + Zigzag两句
+   ======================================== */
+
+/* 两行歌词 - Zigzag错落排版 */
+.lyrics-duo {
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.lyrics-duo .line-1 {
+  align-self: flex-start;
+  padding-left: 8%;
+  max-width: 85%;
+}
+
+.lyrics-duo .line-2 {
+  align-self: flex-end;
+  padding-right: 8%;
+  max-width: 85%;
+}
+
+/* 两行歌词 - 对角线布局 (左上/右下) */
+.lyrics-diagonal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: stretch;
+  justify-items: stretch;
+  gap: 0;
+}
+
+.lyrics-diagonal p:first-child {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 5%;
+  padding-bottom: 0.5rem;
+}
+
+.lyrics-diagonal p:last-child {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 5%;
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+/* Single line emphasis */
+.lyrics-line {
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Artist/song info subtitle */
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-top: 1rem;
+}
+
+/* Decorative divider */
+.divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--accent-gold),
+      transparent);
+  margin: 1.5rem auto;
+}
+
+/* ========================================
+   Special Effects
+   ======================================== */
+
+/* Subtle breathing animation for emphasis */
+@keyframes subtle-glow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.92;
+  }
+}
+
+.lyrics-emphasis {
+  animation: subtle-glow 4s ease-in-out infinite;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg,
+      var(--text-primary) 0%,
+      var(--accent-warm) 50%,
+      var(--text-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   Responsive Typography Sizing
+   ======================================== */
+
+/* Large display text */
+.text-display {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Headline text */
+.text-headline {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Body lyrics text */
+.text-lyrics {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
+
+/* Responsive lyrics sizing - prevent overlap */
+@media (max-width: 1200px) {
+  .lyrics-container .text-6xl {
+    font-size: 3rem;
+  }
+
+  .lyrics-container .text-5xl {
+    font-size: 2.5rem;
+  }
+}
+
+/* Long text auto-sizing - Prevent lyrics from breaking */
+.lyrics-container p {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* ========================================
+   Bilingual Lyrics - 左上/右下对角布局
+   ======================================== */
+
+/* 双语歌词容器 - 对角线布局 */
+.lyrics-bilingual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  padding: 4rem 5rem;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+/* 左侧歌词 - 左上区域 */
+.lyrics-bilingual .lyrics-left {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* 右侧歌词 - 右下区域 */
+.lyrics-bilingual .lyrics-right {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  text-align: right;
+}
+
+/* ========================================
+   Dark Mode Overrides
+   ======================================== */
+
+/* Ensure all text is visible on dark */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: var(--text-primary);
+}
+
+/* Override any light backgrounds */
+.slidev-page {
+  background-color: var(--dark-bg) !important;
+}
+
+/* Override end layout - 提升文字亮度 */
+.slidev-layout.end {
+  --uno-text-opacity: 1 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* ========================================
+   Rolling Credits - 滚动演职人员
+   ======================================== */
+
+.credits-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.credits-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: scroll-up 20s linear infinite;
+  padding-top: 100vh;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.credits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.credit-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-shadow: var(--text-shadow-soft);
+  letter-spacing: 0.1em;
+}
+
+.credit-role {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  opacity: 0.85;
+  letter-spacing: 0.15em;
+}

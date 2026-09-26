@@ -1,0 +1,33 @@
+{
+  "name": "lyric-slides",
+  "description": "歌词幻灯片模板：用简单的文本文件管理歌单，自动生成 Slidev 演出字幕页（对角排版 / 多种风格 / 演职员表），一键部署到 GitHub Pages",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "slidev",
+    "lyrics",
+    "slides",
+    "karaoke",
+    "band",
+    "live-performance"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "fetch": "node scripts/fetch-lyrics.mjs",
+    "predev": "npm run generate",
+    "dev": "slidev --open",
+    "prebuild": "npm run generate",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.11.5",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.58.1"
+  }
+}
